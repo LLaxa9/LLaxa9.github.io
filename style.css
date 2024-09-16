@@ -77,7 +77,7 @@ h2{
 }
 
 body> footer {
-    background-color: orange;
+    background-color: rgb(46, 93, 230);
     display: flex;
 }
 
