@@ -5,13 +5,12 @@
     "main aside"
     "footer footer"
     ;
-    grid-template-columns: 4fr 6fr; 
+    grid-template-columns: 6fr 4fr; 
 }
 
 body{
     font-family: Helvetica, Arial, sans-serif;
     background-color: #f1f1f1;
-    margin:0px;
     font-size: 1.7vw;
     }
     
@@ -117,11 +116,11 @@ aside{
         flex-wrap: wrap;
         margin: 10px -16px;
         max-width: 1000px;
-        max-height: 600px;
+        max-height: 1000px;
         margin: auto;
-        overflow: auto;
+        /* overflow: auto; */
       }
-      
+
       /* Add padding BETWEEN each column */
       .row,
       .row > .column {

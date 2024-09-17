@@ -1,147 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
-    <title>About me</title>
-</head>
-<body>
-    <div id="grid-container">
-        <header id="main-header">
-            <!-- the content of the header goes here -->
-            <h1 id="logo">AA Gallery</h1>
-    <!--          <nav>
-                <ul id="nav-ul">
-                    <li>
-                        <a  href="" class="navbutton">Home</a>
-                    </li>
-                    <li>
-                        <a  href="" class="navbutton">About us</a>
-                    </li>
-                    <li>
-                        <a  href="" class="navbutton">Contact</a>
-                    </li>
-                </ul>
-            </nav> -->
-        </header>
-        <!-- <main> -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="app.js"></script>
+        <title>About me</title>
+    </head>
+    <body>
+        <div id="grid-container">
+            <header id="main-header">
+                <!-- the content of the header goes here -->
+                <h1 id="logo">AA Gallery</h1>
+                <!--          <nav>
+<ul id="nav-ul">
+<li>
+<a  href="" class="navbutton">Home</a>
+</li>
+<li>
+<a  href="" class="navbutton">About us</a>
+</li>
+<li>
+<a  href="" class="navbutton">Contact</a>
+</li>
+</ul>
+</nav> -->
+            </header>
+            <!-- <main> -->
             <!-- <div id="main-content"> -->
-                <aside>
-                    <!-- paintings gallery  -->
-                    <div class="gallery">
-                        <h2>Gallery</h2>
-                        
-                        <div id="myBtnContainer">
-                            <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-                            <button class="btn" onclick="filterSelection('boats')"> Boats</button>
-                            <button class="btn" onclick="filterSelection('landscapes')"> Landscapes</button>
-                            <button class="btn" onclick="filterSelection('flowers')"> Flowers</button>
-                        </div>
-                        
-                        <!-- Portfolio Gallery Grid -->
-                        <div class="row">
-                            <div class="column boats">
-                                <div class="content">
-                                <img src="/photos/Boats0.JPG" alt="Awaiting" style="width:100%">
-                                <h4>Awaiting</h4>
-                                </div>
-                            </div>
-                            <div class="column boats">
-                                <div class="content">
-                                <img src="/photos/Boats1.JPG" alt="Mashed" style="width:56%">
-                                <h4>Mashed</h4>
-                                </div>
-                            </div>
-                            <div class="column boats">
-                                <div class="content">
-                                <img src="/photos/Boats2.JPG" alt="Venice" style="width:100%">
-                                <h4>Venice</h4>
-                                </div>
-                            </div>
-                            <div class="column boats">
-                                <div class="content">
-                                <img src="/photos/Boats3.JPG" alt="Sunset" style="width:100%">
-                                <h4>Sunset</h4>
-                                </div>
-                            </div>
-                            <div class="column boats">
-                                <div class="content">
-                                <img src="/photos/Boats4.JPG" alt="Small_boat" style="width:100%">
-                                <h4>Small boat</h4>
-                                </div>
-                            </div>
+            <aside>
+                <div id="Profile">
+                    <img src="/photos/0Profile.JPG" alt="Profile picture">
+                </div>
+                <!-- paintings gallery  -->
+                <div class="gallery">
+                    <h2>Gallery</h2>
 
-                            <div class="column landscapes">
-                                <div class="content">
-                                <img src="/photos/Landscape0.JPG" alt="Winter" style="width:100%">
-                                <h4>Winter</h4>
-                                </div>
-                            </div>
-                            <div class="column landscapes">
-                                <div class="content">
-                                <img src="/photos/Landscape1.JPG" alt="Sunrise" style="width:100%">
-                                <h4>Sunrise</h4>
-                                </div>
-                            </div>
-                            <div class="column landscapes">
-                                <div class="content">
-                                <img src="/photos/Landscape2.JPG" alt="Barns" style="width:100%">
-                                <h4>Barns</h4>
-                                </div>
-                            </div>
-                            <div class="column landscapes">
-                                <div class="content">
-                                <img src="/photos/Landscape3.JPG" alt="Delta village" style="width:100%">
-                                <h4>Delta village</h4>
-                                </div>
-                            </div>
-                            <div class="column landscapes">
-                                <div class="content">
-                                <img src="/photos/Landscape4.JPG" alt="Church" style="width:100%">
-                                <h4>Church</h4>
-                                </div>
-                            </div>
-                            
-                            <div class="column flowers">
-                                <div class="content">
-                                <img src="/photos/Flowers0.JPG" alt="Flowers" style="width:56%">
-                                <h4>Flowers</h4>
-                                </div>
-                            </div>
-                            <div class="column flowers">
-                                <div class="content">
-                                <img src="/photos/Flowers1.JPG" alt="Flowers" style="width:56%">
-                                <h4>Flowers</h4>
-                                </div>
-                            </div>
-                            <div class="column flowers">
-                                <div class="content">
-                                <img src="/photos/Flowers2.JPG" alt="Chrysanthems" style="width:100%">
-                                <h4>Chrysanthems</h4>
-                                </div>
-                            </div>
-                            <div class="column flowers">
-                                <div class="content">
-                                <img src="/photos/Flowers3.JPG" alt="Poppy" style="width:56%">
-                                <h4>Poppy</h4>
-                                </div>
-                            </div>
-                            <div class="column flowers">
-                                <div class="content">
-                                <img src="/photos/Flowers4.JPG" alt="Sunflowers" style="width:100%">
-                                <h4>Sunflowers</h4>
-                                </div>
-                            </div>
-
-                        <!-- END GRID -->
-                        </div>
-                        
-                    <!-- END Gallery -->
+                    <div id="myBtnContainer">
+                        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+                        <button class="btn" onclick="filterSelection('boats')"> Boats</button>
+                        <button class="btn" onclick="filterSelection('landscapes')"> Landscapes</button>
+                        <button class="btn" onclick="filterSelection('flowers')"> Flowers</button>
                     </div>
 
-                </aside>
+                    <!-- Portfolio Gallery Grid -->
+                    <div class="row">
+                        <div class="column boats">
+                            <div class="content">
+                                <img src="/photos/Boats0.JPG" alt="Awaiting" style="width:100%">
+                                <h4>Awaiting</h4>
+                            </div>
+                        </div>
+                        <div class="column boats">
+                            <div class="content">
+                                <img src="/photos/Boats1.JPG" alt="Mashed" style="width:56%">
+                                <h4>Mashed</h4>
+                            </div>
+                        </div>
+                        <div class="column boats">
+                            <div class="content">
+                                <img src="/photos/Boats2.JPG" alt="Venice" style="width:100%">
+                                <h4>Venice</h4>
+                            </div>
+                        </div>
+                        <div class="column boats">
+                            <div class="content">
+                                <img src="/photos/Boats3.JPG" alt="Sunset" style="width:100%">
+                                <h4>Sunset</h4>
+                            </div>
+                        </div>
+                        <div class="column boats">
+                            <div class="content">
+                                <img src="/photos/Boats4.JPG" alt="Small_boat" style="width:100%">
+                                <h4>Small boat</h4>
+                            </div>
+                        </div>
+
+                        <div class="column landscapes">
+                            <div class="content">
+                                <img src="/photos/Landscape0.JPG" alt="Winter" style="width:100%">
+                                <h4>Winter</h4>
+                            </div>
+                        </div>
+                        <div class="column landscapes">
+                            <div class="content">
+                                <img src="/photos/Landscape1.JPG" alt="Sunrise" style="width:100%">
+                                <h4>Sunrise</h4>
+                            </div>
+                        </div>
+                        <div class="column landscapes">
+                            <div class="content">
+                                <img src="/photos/Landscape2.JPG" alt="Barns" style="width:100%">
+                                <h4>Barns</h4>
+                            </div>
+                        </div>
+                        <div class="column landscapes">
+                            <div class="content">
+                                <img src="/photos/Landscape3.JPG" alt="Delta village" style="width:100%">
+                                <h4>Delta village</h4>
+                            </div>
+                        </div>
+                        <div class="column landscapes">
+                            <div class="content">
+                                <img src="/photos/Landscape4.JPG" alt="Church" style="width:100%">
+                                <h4>Church</h4>
+                            </div>
+                        </div>
+
+                        <div class="column flowers">
+                            <div class="content">
+                                <img src="/photos/Flowers0.JPG" alt="Flowers" style="width:56%">
+                                <h4>Flowers</h4>
+                            </div>
+                        </div>
+                        <div class="column flowers">
+                            <div class="content">
+                                <img src="/photos/Flowers1.JPG" alt="Flowers" style="width:56%">
+                                <h4>Flowers</h4>
+                            </div>
+                        </div>
+                        <div class="column flowers">
+                            <div class="content">
+                                <img src="/photos/Flowers2.JPG" alt="Chrysanthems" style="width:100%">
+                                <h4>Chrysanthems</h4>
+                            </div>
+                        </div>
+                        <div class="column flowers">
+                            <div class="content">
+                                <img src="/photos/Flowers3.JPG" alt="Poppy" style="width:56%">
+                                <h4>Poppy</h4>
+                            </div>
+                        </div>
+                        <div class="column flowers">
+                            <div class="content">
+                                <img src="/photos/Flowers4.JPG" alt="Sunflowers" style="width:100%">
+                                <h4>Sunflowers</h4>
+                            </div>
+                        </div>
+
+                        <!-- END GRID -->
+                    </div>
+
+                    <!-- END Gallery -->
+                </div>
+
+            </aside>
             <main>    
                 <div>
                     <article>
@@ -224,55 +227,55 @@
                         </footer>
                     </article>
                 </div>
-            <!-- </div> -->
-            <!-- main content of the website can go here -->
-            <hr>
-            <h2>Contact</h2>
-            <p style="text-align:center">Feel free to reach out to me, or visit my social media.</p>
-            <form action="" method="">
-                <label for="first_name">First Name:</label>
-                <input type="text" id="first_name" name="first_name" required>
-                <br>
+                <!-- </div> -->
+                <!-- main content of the website can go here -->
+                <hr>
+                <h2>Contact</h2>
+                <p style="text-align:center">Feel free to reach out to me, or visit my social media.</p>
+                <form action="" method="">
+                    <label for="first_name">First Name:</label>
+                    <input type="text" id="first_name" name="first_name" required>
+                    <br>
 
-                <label for="last_name">Last Name:</label>
-                <input type="text" id="last_name" name="last_name" required>
-                <br>
+                    <label for="last_name">Last Name:</label>
+                    <input type="text" id="last_name" name="last_name" required>
+                    <br>
 
-                <label for="email">e-mail:</label>
-                <input type="email" name="email" id="email">
-                <br>
+                    <label for="email">e-mail:</label>
+                    <input type="email" name="email" id="email">
+                    <br>
 
-                <br>
-                <label for="message">Message</label>
-                <textarea name="bio" id="bio" cols="50" rows="10"></textarea>
+                    <br>
+                    <label for="message">Message</label>
+                    <textarea name="bio" id="bio" cols="50" rows="10"></textarea>
 
-                <input type="checkbox" name="subscribe" id="subscribe">
-                <label for="subscribe">Subscribe to our newsletter</label>
+                    <input type="checkbox" name="subscribe" id="subscribe">
+                    <label for="subscribe">Subscribe to our newsletter</label>
 
-                <input type="submit" value="Send!">
-            </form>
-        </main>
-        <footer>
-            <!-- footer goes here -->
-            <h2>AA Gallery</h2>
-            <section>
-                <nav>
-                    <ul id="footer-ul">
-                        <div> 
-                            <li><a href=""></a>Home</li>
-                            <li><a href=""></a>About us</li>
-                            <li><a href=""></a>Contact</li>
-                            <li><a href=""></a>Careers</li>
-                        </div>
-                    <div>
-                            <li><a href=""></a>Priacy Policy</li>
-                            <li><a href=""></a>Terms & Conditions</li>
-                            <li><a href=""></a>Cookie Policy</li>
-                    </div>
-                    </ul>
-                </nav>
-            </section>
-        </footer>
-    </div>
-</body>
+                    <input type="submit" value="Send!">
+                </form>
+            </main>
+            <footer>
+                <!-- footer goes here -->
+                <h2>AA Gallery</h2>
+                <section>
+                    <nav>
+                        <ul id="footer-ul">
+                            <div> 
+                                <li><a href=""></a>Home</li>
+                                <li><a href=""></a>About us</li>
+                                <li><a href=""></a>Contact</li>
+                                <li><a href=""></a>Careers</li>
+                            </div>
+                            <div>
+                                <li><a href=""></a>Priacy Policy</li>
+                                <li><a href=""></a>Terms & Conditions</li>
+                                <li><a href=""></a>Cookie Policy</li>
+                            </div>
+                        </ul>
+                    </nav>
+                </section>
+            </footer>
+        </div>
+    </body>
 </html>
