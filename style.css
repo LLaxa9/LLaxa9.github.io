@@ -1,100 +1,194 @@
+#grid-container{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "main aside"
+    "footer footer"
+    ;
+    grid-template-columns: 4fr 6fr; 
+}
+
 body{
-font-family: Helvetica, Arial, sans-serif;
-margin:0px;
-font-size: 1.5vw;
-}
-
-#logo{
-    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #f1f1f1;
     margin:0px;
+    font-size: 1.7vw;
+    }
+    
+    #logo{
+        color: white;
+        margin:0px;
+        padding: 8px;
+        font-family: "Fredoka One", sans-serif;
+        text-shadow:
+         1px  1px 0px black,
+        -1px  1px 0px black,
+         1px -1px 0px black,
+        -1px -1px 0px black;
+    }
+    
+    ul{
+        margin:0px
+    }
+    
+    body> div> header {
+        background-color: rgb(46, 93, 230);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        grid-area: header;
+    }
+    
+    body> div> header> nav> ul{
+        list-style: none;
+        text-decoration: none;
+    }
+    
+    #nav-ul{
+    display: flex;
+    
+    }
+    
+    #nav-ul > li {
     padding: 8px;
-    font-family: "Fredoka One", sans-serif;
-    /* box-shadow: 8px 8px 10px 3px darkorange; */
-    width: 16%;
-    text-shadow:
-     1px  1px 0px black,
-    -1px  1px 0px black,
-     1px -1px 0px black,
-    -1px -1px 0px black;
-}
+    margin: 16px;
+    }
+    
+    .navbutton{
+        color: white;
+        text-decoration: none;
+        padding: 12px;
+        border: 1px solid white;
+        border-radius: 10%;
+    }
+    
+    
+    #main-content{
+        display: inline-block;
+        justify-content: space-around;
+    }
+    
+    
+aside{
+        grid-area: aside;
+    }
 
-ul{
-    margin:0px
-}
+    form{
+        text-align: center;
+    }
+    h2{
+        text-align: center;
+    }
+    
+    body> div> footer {
+        background-color: rgb(46, 93, 230);
+        display: flex;
+        grid-area: footer;
+    }
+    
+    
+    #footer-ul{
+        display: flex;
+        list-style: none;
+    }
+    
+    #footer-ul > div > li {
+        margin-left: 12px;
+    
+    }
+    #footer-ul > div > li > a {
+        color: white;
+        text-decoration: none;
+    }
 
-body> header {
-    background-color: rgb(46, 93, 230);
-    color: white;
-    display: flex;
-    height: 25%;
-    align-items: center;
-    justify-content: space-around;
-}
 
-body> header> nav> ul{
-    list-style: none;
-    text-decoration: none;
-}
 
-#nav-ul{
-display: flex;
+    /* gallery style */
 
-}
+    * {
+        box-sizing: border-box;
+      }
+      
+      /* Center website */
+      
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 10px -16px;
+        max-width: 1000px;
+        max-height: 600px;
+        margin: auto;
+        overflow: auto;
+      }
+      
+      /* Add padding BETWEEN each column */
+      .row,
+      .row > .column {
+        padding: 8px;
+      }
+      
+      /* Create three equal columns that floats next to each other */
+      .column {
+        width: 33.33%;
+        display: none; /* Hide all elements by default */
+      }
+      
+      /* Clear floats after rows */ 
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      
+      /* Content */
+      .content {
+        background-color: white;
+        padding: 2px;
+        position: relative;
+        text-align: center;
+      }
 
-#nav-ul > li {
-padding: 8px;
-margin: 16px;
-}
+      
+      .content> h4{
+        position: absolute;
+        bottom: 0;
+        color: #fff; /* White text */
+        text-shadow:
+        1px  1px 0px black,
+       -1px  1px 0px black,
+        1px -1px 0px black,
+       -1px -1px 0px black;
+        width: 100%;
+        text-align: center;
+        padding: 1px;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
 
-.navbutton{
-    color: white;
-    text-decoration: none;
-    padding: 12px;
-    border: 1px solid white;
-    border-radius: 10%;
-}
-
-body > main article{
-    width: 70%;
-    margin: auto;
-    text-align: justify;
-}
-
-#main-content{
-    display: flex;
-    justify-content: space-around;
-}
-
-#main-content > div{
-    width: 70%;
-}
-
-form{
-    text-align: center;
-}
-h2{
-    text-align: center;
-}
-
-body> footer {
-    background-color: rgb(46, 93, 230);
-    display: flex;
-}
-
-img{
-    border-radius: 50%;
-}
-
-#footer-ul{
-    display: flex;
-    list-style: none;
-}
-
-#footer-ul > div > li {
-    margin-left: 12px;
-
-}
-#footer-ul > div > li > a {
-    color: white;
-    text-decoration: none;
-}
+      .content:hover h4{
+        opacity: 1;
+      }
+      
+      /* The "show" class is added to the filtered elements */
+      .show {
+        display: block;
+      }
+      
+      /* Style the buttons */
+      .btn {
+        border: none;
+        outline: none;
+        padding: 12px 16px;
+        background-color: white;
+        cursor: pointer;
+      }
+      
+      .btn:hover {
+        background-color: #ddd;
+      }
+      
+      .btn.active {
+        background-color: #666;
+        color: white;
+      }
