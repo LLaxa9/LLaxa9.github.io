@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"> -->
         <link rel="stylesheet" href="style.css">
         <script src="app.js"></script>
         <title>About me</title>
@@ -198,6 +199,42 @@
                         <main>
                             <p>My inspiration comes from spending time </p>
                             <p>I am particulraly influenced by artists</p>
+                           <div class="container px-4 container-sm">
+                                <!-- Europeana API-->
+                                <!-- <main class="container px-4 container-sm"> -->
+                                    
+                                    <!-- <form id="search">
+                                    <div class="mb-3">
+                                        <label for="apiKey" class="form-label">First, tell me your <a href="https://pro.europeana.eu/page/get-api">API key</a>:</label>
+                                        <input required type="text" name="apiKey" id="apiKey" value="" class="form-control">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="searchQuery" class="form-label">Then, let's look for...</label>
+                                        <input required type="text" name="searchQuery" id="searchQuery" value="frogs" class="form-control">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="submit" value="Go!" class="btn btn-primary">
+                                    </div>
+                                    </form> -->
+                                
+                                    <div id="resultsContainer" class="invisible">
+                                    <div class="alert alert-info" role="alert">
+                                        At <a  href="https://www.europeana.eu/en/search?page=1&view=grid&query=Impressionism%20oil%20paintings"> www.Europeana.eu </a>
+                                        there are <strong id="resultsCount"></strong> results searching for "Impressionism oil paintings"
+                                    </div>
+                                    <div id="previewsContainer" class="card-group"></div>
+                                    </div>
+                                </div>
+                              <!-- <euro> -->
+
+
+
+
+
+
+
+
+
                         </main>
                         <footer>
                         </footer>

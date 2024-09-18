@@ -1,22 +1,4 @@
-// document.addEventListener("DOMContentLoaded", () =>{
-
-//     const images = document.querySelectorAll("img");
-
-//         for(const image of images){
-//             fetch("https://dog.ceo/api/breeds/image/random")
-//                 .then(response => response.json())
-//                 .then(data => {
-//                     image.src = data.message
-//                     image.width = 100;
-//                     image.height = 100;
-//                 })
-//         }
-// })
-
-
 //gallery script
-
-
 filterSelection("all")
 function filterSelection(c) {
     var x, i;
@@ -52,12 +34,77 @@ function w3RemoveClass(element, name) {
 
 // Add active class to the current button (highlight it)
 var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-console.log("btns are "+ btns);
-for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function(){
-        var current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-    });
+if(btnContainer !== null){
+    // console.log("active");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function(){
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        });
+    }
+
 }
+
+//Europeana API
+
+const searchEuropeanaRecords = async () => {
+
+    // this is the API URL for searching Europeana records
+    const url = new URL("https://api.europeana.eu/record/search.json");
+    url.search = new URLSearchParams({
+        // this is your API key
+        wskey: "suckshusen",
+        // this is what you are looking for
+        query: "Impressionism oil paintings",
+        // let's make sure we always get previews
+        thumbnail: "true",
+        // this is the maximum number of results
+        rows: 5,
+        // randomise the results!
+        sort: "random",
+        // we don't want much information here, so let's keep it minimal
+        profile: "minimal"
+    }).toString();
+
+    const response = await fetch(url);
+    const json = await response.json();
+    return json;
+};
+
+const showResults = (searchResults) => {
+    const resultsCountElement = document.getElementById("resultsCount");
+    resultsCountElement.textContent = searchResults.totalResults;
+
+    const previewsContainer = document.getElementById("previewsContainer");
+    previewsContainer.innerHTML = "";
+    for (const item of searchResults.items || []) {
+        const cardElement = document.createElement("div");
+        cardElement.classList.add("card", "m-3");
+        const imgElement = document.createElement("img");
+        imgElement.setAttribute("src", item.edmPreview);
+        imgElement.setAttribute("alt", item.title?.[0]);
+                                imgElement.classList.add("card-img-top");
+                                cardElement.appendChild(imgElement);
+                                const cardBodyElement = document.createElement("div");
+                                cardBodyElement.classList.add("card-body");
+                                const cardTitleElement = document.createElement("strong");
+                                cardTitleElement.classList.add("card-title");
+                                cardTitleElement.textContent = item.title?.[0];
+                                cardBodyElement.appendChild(cardTitleElement);
+                                cardElement.appendChild(cardBodyElement);
+                                previewsContainer.appendChild(cardElement);
+                                }
+
+                                const resultsContainer = document.getElementById("resultsContainer");
+                                resultsContainer.classList.remove("invisible");
+                                };
+
+
+                                const handleSubmitSearch = async () => {
+                                const searchResults = await searchEuropeanaRecords();
+                                showResults(searchResults);
+                                };
+
+                                handleSubmitSearch();

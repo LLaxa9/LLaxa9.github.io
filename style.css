@@ -193,3 +193,20 @@
           background-color: #666;
           color: white;
         }
+
+
+/* Europeana style */
+
+
+.invisible {
+  visibility: hidden!important
+}
+
+@media (min-width: 550px) {
+  .card-group {
+      display:flex;
+  }}
+
+  .card-img,.card-img-bottom,.card-img-top {
+    width: 100%
+}
