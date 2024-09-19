@@ -73,6 +73,16 @@
       
   aside{
           grid-area: aside;
+            position: relative;
+            text-align: center;
+            color:white;
+      }
+      #haside{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start ;
+        position: relative;
+        transform: translate(0%, -100%);
       }
   
       form{
