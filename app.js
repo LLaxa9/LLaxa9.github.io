@@ -1,3 +1,33 @@
+
+let ribbonsAnon = function ribbons() {
+    //determine how many 70 px ribbons fit in the viewport, 
+    //min (width of the viewport, ) 
+    let vw = 
+        Math.min(//cap nr of ribbons to 15-1
+            Math.floor(//integer number of 70px ribbons that fit in the viewport
+                Math.max(//max viewport value
+                    document.documentElement.clientWidth || 0, window.innerWidth || 0)
+                /70),
+            14
+        );
+    let divRibbons = document.getElementById("ribbons");
+    //clear any previous image content
+    divRibbons.innerHTML = "";
+    //generate max (15-1) image html elements to populate ribbons 
+    let imgI=document.createElement("img");
+    for (let i=0; i<=vw ; i++){
+        let imgI = document.createElement("img");
+        imgI.src="/sprite/h" +i+".JPG";
+        divRibbons.append(imgI);
+    }
+};
+
+window.onload = (ribbonsAnon);
+window.onresize = (ribbonsAnon);
+
+
+
+
 //gallery script
 filterSelection("all")
 function filterSelection(c) {

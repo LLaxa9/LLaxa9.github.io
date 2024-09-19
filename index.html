@@ -10,38 +10,45 @@
     </head>
     <body>
         <div id="grid-container">
+            <div id="ribbons">
+            </div>
             <header id="main-header">
-                <!-- the content of the header goes here -->
-                <h1 id="logo">AA Gallery</h1>
-                <!--          <nav>
-<ul id="nav-ul">
-<li>
-<a  href="" class="navbutton">Home</a>
-</li>
-<li>
-<a  href="" class="navbutton">About us</a>
-</li>
-<li>
-<a  href="" class="navbutton">Contact</a>
-</li>
-</ul>
-</nav> -->
-            </header>
-            <!-- <main> -->
-            <!-- <div id="main-content"> -->
-            <aside>
-                <img src="/sprite/a8.JPG" alt="brush gradient">
-                <div id="haside">
-                    <h1>Introduction</h1>
-                    <h1>Artist statement</h1>
-                    <h1>Journey</h1>
-                    <h1>Achievements</h1>
-                    <h1>Inspiration</h1>
-                    <h1>Personal</h1>
-                    <h1>Contact</h1>
+                <div id="border_top">
+                    <img src="/sprite/border_top.JPG" alt="">
                 </div>
-                
-            </aside>
+
+
+
+                <!-- the content of the header goes here -->
+
+                <!-- <h1 id="logo">AA Gallery</h1> -->
+                <nav>
+                    <ul id="nav-ul">
+                        <li>
+                            <img src="/sprite/n0.JPG" alt="achievements button">
+                            <div>
+                                <a  href="#achievements" class="navbutton">
+                                    Achievements</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="/sprite/n1.JPG" alt="achievements button">
+                            <div>
+                                <a  href="#journey" class="navbutton">
+                                    Journey</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="/sprite/n2.JPG" alt="achievements button">
+                            <div>
+                                <a  href="#contact" class="navbutton">
+                                    Contact</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <!-- < div id="main-content"> -->
             <main>    
                 <div>
                     <article>
@@ -52,12 +59,11 @@
                             <h4> Read time: 5 minutes</h4>
                         </header>
                         <main>
+                            <img src="/photos/0Profile.JPG" id="profile" alt="Profile picture">
                             <p>Hi, I'm AA, a painter based in my town</p>
                             <p>My work primarily focuses on natural landscapes and flowers</p>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae saepe, quae corporis, dolor consectetur enim ipsum dolorem eveniet debitis asperiores dignissimos aliquam, rerum numquam deleniti distinctio quis libero similique nulla dolores tempore dolorum nemo.</p>
-                            <div id="Profile">
-                                <img src="/photos/0Profile.JPG" alt="Profile picture">
-                            </div>
+
                         </main>
                         <footer>
                             <h5>latest update: 16-09-2024</h5>
@@ -75,11 +81,11 @@
                         <footer>
                         </footer>
                     </article>
-                    <article></article>
+                    <article id="achievements">
                         <header>
                             <br>
                             <!-- Article's header goes here -->
-                            <h2>Achievements and Exhibitions</h2>
+                            <h2>Achievements</h2>
                         </header>
                         <main>
                             <p>Some of my notable achievements include</p>
@@ -195,19 +201,11 @@
                                 <!-- END Gallery -->
                             </div>
 
-
-
-
-
-
-
-
-
                         </main>
                         <footer>
                         </footer>
                     </article>
-                    <article></article>
+                    <article>
                         <br>
                         <header>
                             <!-- Article's header goes here -->
@@ -216,52 +214,32 @@
                         <main>
                             <p>My inspiration comes from spending time </p>
                             <p>I am particulraly influenced by artists</p>
-                           <div class="container px-4 container-sm">
+
+
+                            <div class="container px-4 container-sm">
                                 <!-- Europeana API-->
-                                <!-- <main class="container px-4 container-sm"> -->
-                                    
-                                    <!-- <form id="search">
-                                    <div class="mb-3">
-                                        <label for="apiKey" class="form-label">First, tell me your <a href="https://pro.europeana.eu/page/get-api">API key</a>:</label>
-                                        <input required type="text" name="apiKey" id="apiKey" value="" class="form-control">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="searchQuery" class="form-label">Then, let's look for...</label>
-                                        <input required type="text" name="searchQuery" id="searchQuery" value="frogs" class="form-control">
-                                    </div>
-                                    <div class="mb-3">
-                                        <input type="submit" value="Go!" class="btn btn-primary">
-                                    </div>
-                                    </form> -->
-                                
-                                    <div id="resultsContainer" class="invisible">
+                                <div id="resultsContainer" class="invisible">
                                     <div class="alert alert-info" role="alert">
                                         At <a  href="https://www.europeana.eu/en/search?page=1&view=grid&query=Impressionism%20oil%20paintings"> www.Europeana.eu </a>
                                         there are <strong id="resultsCount"></strong> results searching for "Impressionism oil paintings"
                                     </div>
-                                    <div id="previewsContainer" class="card-group"></div>
+                                    <div id="previewsContainer" class="card-group">
+
                                     </div>
                                 </div>
-                              <!-- <euro> -->
-
-
-
-
-
-
-
-
+                            </div>
+                            <!-- <europeana> -->
 
                         </main>
                         <footer>
                         </footer>
                     </article>
 
-                    <article>
+                    <article id="journey">
                         <header>
                             <br>
                             <!-- Article's header goes here -->
-                            <h2>Background and journey</h2>
+                            <h2>Journey</h2>
                         </header>
                         <main>
                             <p>I began to express artistically by pyrography (woodburning).</p>
@@ -271,8 +249,6 @@
                         </footer>
 
                     </article>
-                    
-                    
 
                     <article>
                         <header>
@@ -286,56 +262,61 @@
                         <footer>
                         </footer>
                     </article>
-                </div>
-                <!-- </div> -->
-                <!-- main content of the website can go here -->
-                <hr>
-                <h2>Contact</h2>
-                <p style="text-align:center">Feel free to reach out to me, or visit my social media.</p>
-                <form action="" method="">
-                    <label for="first_name">First Name:</label>
-                    <input type="text" id="first_name" name="first_name" required>
-                    <br>
+                    <div>
+                        <div id="contact">
+                            <!-- main content of the website can go here -->
+                            <hr>
+                            <div id="Contact">
+                                <h2>Contact</h2>
+                                <p style="text-align:center">Feel free to reach out to me, or visit my social media.</p>
+                                <form action="" method="">
+                                    <label for="first_name">First Name:</label>
+                                    <input type="text" id="first_name" name="first_name" required>
+                                    <br>
 
-                    <label for="last_name">Last Name:</label>
-                    <input type="text" id="last_name" name="last_name" required>
-                    <br>
+                                    <label for="last_name">Last Name:</label>
+                                    <input type="text" id="last_name" name="last_name" required>
+                                    <br>
 
-                    <label for="email">e-mail:</label>
-                    <input type="email" name="email" id="email">
-                    <br>
+                                    <label for="email">e-mail:</label>
+                                    <input type="email" name="email" id="email">
+                                    <br>
 
-                    <br>
-                    <label for="message">Message</label>
-                    <textarea name="bio" id="bio" cols="50" rows="10"></textarea>
+                                    <br>
+                                    <label for="message">Message</label>
+                                    <textarea name="bio" id="bio" cols="50" rows="10"></textarea>
 
-                    <input type="checkbox" name="subscribe" id="subscribe">
-                    <label for="subscribe">Subscribe to our newsletter</label>
+                                    <input type="checkbox" name="subscribe" id="subscribe">
+                                    <label for="subscribe">Subscribe to our newsletter</label>
 
-                    <input type="submit" value="Send!">
-                </form>
+                                    <input type="submit" value="Send!">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+                <footer>
+                    <!-- footer goes here -->
+                    <h2>AA Gallery</h2>
+                    <section>
+                        <nav>
+                            <ul id="footer-ul">
+                                <div> 
+                                    <li><a href=""></a>Home</li>
+                                    <li><a href=""></a>About us</li>
+                                    <li><a href=""></a>Contact</li>
+                                    <li><a href=""></a>Careers</li>
+                                </div>
+                                <div>
+                                    <li><a href=""></a>Priacy Policy</li>
+                                    <li><a href=""></a>Terms & Conditions</li>
+                                    <li><a href=""></a>Cookie Policy</li>
+                                </div>
+                            </ul>
+                        </nav>
+                    </section>
+                </footer>
             </main>
-            <footer>
-                <!-- footer goes here -->
-                <h2>AA Gallery</h2>
-                <section>
-                    <nav>
-                        <ul id="footer-ul">
-                            <div> 
-                                <li><a href=""></a>Home</li>
-                                <li><a href=""></a>About us</li>
-                                <li><a href=""></a>Contact</li>
-                                <li><a href=""></a>Careers</li>
-                            </div>
-                            <div>
-                                <li><a href=""></a>Priacy Policy</li>
-                                <li><a href=""></a>Terms & Conditions</li>
-                                <li><a href=""></a>Cookie Policy</li>
-                            </div>
-                        </ul>
-                    </nav>
-                </section>
-            </footer>
         </div>
     </body>
 </html>
