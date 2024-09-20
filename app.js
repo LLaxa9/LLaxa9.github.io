@@ -10,9 +10,14 @@ let ribbonsAnon = function ribbons() {
                 /70),
             14
         );
+
+     
     let divRibbons = document.getElementById("ribbons");
     //clear any previous image content
     divRibbons.innerHTML = "";
+    // frameLeft=document.createElement("div"); 
+    // frameLeft.id="frame_left"   
+    // divRibbons.append(frameLeft);
     //generate max (15-1) image html elements to populate ribbons 
     let imgI=document.createElement("img");
     for (let i=0; i<=vw ; i++){
@@ -20,6 +25,9 @@ let ribbonsAnon = function ribbons() {
         imgI.src="/sprite/h" +i+".JPG";
         divRibbons.append(imgI);
     }
+    // frameRight=document.createElement("div"); 
+    //  frameRight.id="frame_right" 
+    //  divRibbons.append(frameRight); 
 };
 
 window.onload = (ribbonsAnon);
