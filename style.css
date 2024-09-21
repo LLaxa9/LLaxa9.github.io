@@ -5,10 +5,11 @@ body{
 }
 
 #logo{
+  width:20vw;
   margin:0px;
   color: white;
   padding: 8px;
-  transform: translate(0,-60px);
+  text-decoration: none;
   font-family: "Fredoka One", sans-serif;
   text-shadow:
       1px  1px 0px black,
@@ -25,33 +26,18 @@ body{
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center ;
-  gap: 5px;
+  gap: 1vw;
   width: 100vw;
 }
 
-#border_top img{
-  width: 100vw;
-  display:none;
-}
 
-#frame_top {
-  height: 35px;
-  background-image: linear-gradient( #856D49, #D2BB94,#CCA883);
+
+#frame{
+  height: 7vh;
+  background-image: linear-gradient(#cfbaa0, #f8f0e4, #bdac91);
+  position: sticky;
+  top: 0;
 }
-#frame_left {
-  height: 300px;
-  width:35px;
-  background-image: linear-gradient(to left,#CCA883, #D2BB94, #856D49);
-}
-#frame_right {
-  height: 300px;
-  width:35px;
-  background-image: linear-gradient(to right,#CCA883, #D2BB94, #856D49);
-}
-/* #frame_bottom {
-  height: 70px;
-  background-image: linear-gradient(#CCA883, #D2BB94, #856D49);
-} */
 
 
 ul{
@@ -62,7 +48,7 @@ body> div> header {
   /* background-color: rgb(46, 93, 230); */
   /* background-color: white; */
   /* color: white; */
-  /* display: flex; */
+  display: flex;
   align-items: center;
   justify-content: space-around;
   position: sticky;
@@ -74,12 +60,28 @@ body> div> header> nav> ul{
   list-style: none;
   text-decoration: none;
   justify-content: center ;
-  gap:20px;
+  /* gap:20px; */
   position: relative;
   position: sticky;
   top: 0;
   height: 60px;
-  background-image: linear-gradient(#CCA883, #D2BB94, #856D49);
+}
+
+/* https://css-pattern.com/ */
+#artisticHeader{
+  height: 30vh;
+  /* height:300px; */
+  --s: 1vh; /* control the size*/
+  --c1: #f5ede9;
+  --c2: #f8f3ea;
+  --c3: #f1f1f1;
+  --g: var(--s); /* gap between lines */
+  background:
+      conic-gradient(at var(--s) calc(100% - var(--s)),#0000 270deg,var(--c1) 0) calc(var(--s) + var(--g)) 0,
+      linear-gradient(var(--c2) var(--s),#0000 0) 0 var(--g),
+      conic-gradient(at var(--s) calc(100% - var(--s)),#0000 90deg,var(--c2) 0 180deg, var(--c1) 0),
+      var(--c3);
+  background-size: calc(2*(var(--s) + var(--g))) calc(2*(var(--s) + var(--g)));
 }
 
 
@@ -88,14 +90,12 @@ body> div> header> nav> ul{
   margin: 16px;
   position: relative;
   text-align: center;
-  /* color: white; */
-
 }
 #nav-ul > li >img {
   border-radius: 45%;
   transform: translate(0, -35%);
-
 }
+
 #nav-ul > li>div{
   position: absolute;
   top: 50%;
@@ -115,11 +115,11 @@ body> div> header> nav> ul{
       -1px  1px 0px black,
       1px -1px 0px black,
       -1px -1px 0px black;
-  /* padding: 12px; */
-  /* border: 1px solid white; */
-  /* border-radius: 10%; */
 }
 
+#container{
+  padding:5vw;
+}
 #main-content{
   display: inline-block;
   justify-content: space-around;

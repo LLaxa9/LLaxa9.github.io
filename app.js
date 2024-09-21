@@ -23,11 +23,27 @@ let ribbonsAnon = function ribbons() {
     for (let i=0; i<=vw ; i++){
         let imgI = document.createElement("img");
         imgI.src="/sprite/h" +i+".JPG";
+        //fancy-border-radius
+        //https://9elements.github.io/fancy-border-radius/ 
+        //random Border points
+        let topBp= Math.floor(Math.random() * 100) + 1;
+        let rightBp= Math.floor(Math.random() * 100) + 1;
+        let bottomBp= Math.floor(Math.random() * 100) + 1;
+        let leftBp= Math.floor(Math.random() * 100) + 1;
+
+        //CSS border-radius= "
+        // topBp% 100-topBp% 
+        // bottomBp% 100-bottomBp% / 
+        // leftBp% 
+        //rightBp% 100-rightBp% 
+        // 100-leftBp%  "
+        imgI.style.borderRadius= ""+topBp+"%"+(100-topBp)+"%"+
+                                   +bottomBp+"%"+(100-bottomBp)+"%/"+
+                                     +leftBp+"%"+ 
+                                     +rightBp+"%"+(100-rightBp)+"%"+
+                                     +(100-leftBp)+"%";
         divRibbons.append(imgI);
     }
-    // frameRight=document.createElement("div"); 
-    //  frameRight.id="frame_right" 
-    //  divRibbons.append(frameRight); 
 };
 
 window.onload = (ribbonsAnon);
