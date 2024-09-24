@@ -4,26 +4,15 @@ body{
   font-size: 1.7vw;
 }
 
-#logo{
-  width:20vw;
-  margin:0px;
-  color: white;
-  padding: 8px;
-  text-decoration: none;
-  font-family: "Fredoka One", sans-serif;
-  text-shadow:
-      1px  1px 0px black,
-      -1px  1px 0px black,
-      1px -1px 0px black,
-      -1px -1px 0px black;
-}
+
+/* body > header {
+  position: absolute;
+  top: 0;
+} */
 
 /* https://css-pattern.com/ */
-#artisticHeader{
-  display: flex;
-  height: 30vh;
-  /* height:300px; */
-  --s: 1vh; /* control the size*/
+.banner{
+  --s: 1vh; 
   --c1: #f5ede9;
   --c2: #f8f3ea;
   --c3: #f1f1f1;
@@ -37,49 +26,51 @@ body{
 }
 
 #ribbons{
+  padding:5px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center ;
   gap: 1vw;
-  width: 100vw;
+  width: 95vw;
 }
 
 
 
-#border{
+ /* #border>*{ */
+  /* display: inline-block;
+  width: 100vw;
+  /* padding: 0px;
+  margin: 0px;
+  border: 0px; */
+  /* left: 0px;
+  right: 0px;
+  top: 0px; */
+  /* height: 7vh;
+  background-image: linear-gradient(#cfbaa0, #f8f0e4 30%, #bdac91);
+  position: sticky;
+  top: 0; 
+}
+*/
+
+body > header > nav > ul{
+  padding:0px;
+  margin:0px;
+  border:0px;
   height: 7vh;
+  width: 100vw;
   background-image: linear-gradient(#cfbaa0, #f8f0e4 30%, #bdac91);
   position: sticky;
   top: 0;
-}
-
-
-ul{
-  margin:0px
-}
-
-body > header {
-  /* background-color: rgb(46, 93, 230); */
-  /* background-color: white; */
-  /* color: white; */
-  /* display: flex; */
-  align-items: center;
-  justify-content: space-around;
-  /* position: sticky; */
-  top: 0;
-}
-
-body > header > nav > ul{
   display: flex;
   list-style: none;
   text-decoration: none;
   justify-content: center ;
   /* gap:20px; */
-  position: relative;
-  position: sticky;
-  top: 0;
-  height: 60px;
+  /* position: relative;
+  position: sticky; */
+  /* top: 0; */
+  /* height: 60px; */
 }
 
 #nav-ul > li {
@@ -102,6 +93,14 @@ body > header > nav > ul{
 
 }
 
+#logo>*{
+  margin-left: 0%;
+  text-decoration: none;
+  color:white;
+}
+
+
+
 .navbutton{
   color: white;
   text-decoration: none;
@@ -114,13 +113,14 @@ body > header > nav > ul{
       -1px -1px 0px black;
 }
 
-/* #container{
-  padding:5vw;
-} */
 
-#main-content{
+
+
+
+body>main  {
   display: inline-block;
   justify-content: space-around;
+  padding:3vw;
 }
 
 @media only screen and (min-width: 768px) {
@@ -170,11 +170,6 @@ body> footer {
   color: white;
   text-decoration: none;
 }
-
-#statement{
-  display: none;
-}
-
 
 /* gallery style */
 
