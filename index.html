@@ -12,43 +12,47 @@
             <!-- the content of the header goes here -->
             <div class="banner">
                 <!-- <div id="artisticHeader"> -->
-                    <div id="ribbons"></div>
+                <div id="ribbons"></div>
                 <!-- </div> -->
             </div>
-            <nav>
+            <nav id="top_nav">
                 <!-- <div id="border"> -->
-                    <!-- <a href="#top" id="logo">
-                        <h1>AA Gallery</h1>
-                    </a> -->
+                <!-- <a href="#top" id="logo">
+<h1>AA Gallery</h1>
+</a> -->
+                <span id="logo">
+                    <a href="#top">
+                        <h1>
+                            AA Gallery
+                        </h1>
+                    </a>
+                </span>
                 <ul id="nav-ul">
-                    <div id="logo">
-                        <a href="#top">
-                            <h1>AA Gallery</h1>
-                        </a>
-                    </div>   
+
+                    <!--                    </div>   -->
                     <li>
-                        <img src="/sprite/n0.JPG" alt="achievements button">
-                        <div>
-                            <a  href="#statement" class="navbutton">
-                                Statement</a>
-                        </div>
+                        <!-- <img src="/sprite/n0.JPG" alt="achievements button"> -->
+                        <!-- <div> -->
+                        <a  href="#statement" class="navbutton">
+                            Statement</a>
+                        <!-- </div> -->
                     </li>
                     <li>
-                        <img src="/sprite/n1.JPG" alt="achievements button">
-                        <div>
-                            <a  href="#gallery" class="navbutton">
-                                Gallery</a>
-                        </div>
+                        <!-- <img src="/sprite/n1.JPG" alt="achievements button"> -->
+                        <!-- <div> -->
+                        <a  href="#gallery" class="navbutton">
+                            Gallery</a>
+                        <!-- </div> -->
                     </li>
                     <li>
-                        <img src="/sprite/n2.JPG" alt="achievements button">
-                        <div>
-                            <a  href="#contact" class="navbutton">
-                                Contact</a>
-                        </div>
+                        <!-- <img src="/sprite/n2.JPG" alt="achievements button"> -->
+                        <!-- <div> -->
+                        <a  href="#contact" class="navbutton">
+                            Contact</a>
+                        <!-- </div> -->
                     </li>
                 </ul>
-            <!-- </div> -->
+                <!-- </div> -->
             </nav>
         </header>
         <main>  
@@ -63,7 +67,7 @@
                     <main>
                         <div id="AAprofile">
                             <img src="/photos/0Profile.JPG" alt="AAprofile" style="width:100%">
-                            <p><a href="#contact" class="navbutton"> AA, painter</a></p>
+                            <p><a href="#contact"> AA, painter</a></p>
                         </div>
                         <div>
                             <p>Born in 1956 in Romania, the artist’s journey is a testament to resilience and passion. His diverse career path includes roles as an accountant, administrator, naval pilot officer, canteen head, and guardsman. These experiences have shaped his unique perspective and drive to push himself and inspire others to achieve their best.</p>
@@ -86,11 +90,11 @@
                         <p>Oil painting allows me to unleash my raw emotions onto the canvas, 
                             17 years spent outdoors in the Danube Delta, 
                             and my experience as a sailor reaching the vibrant streets of India to the lush landscapes of Brazil
-                             have enriched my palette with diverse colours and textures.
+                            have enriched my palette with diverse colours and textures.
                             Through continuous experimentation and speedy execution
                             I strive to capture the essence of my inner world
                             and display nature’s grace.</p>
-                            <!-- <p><em>Nihil sine Deo.</em></p> -->
+                        <!-- <p><em>Nihil sine Deo.</em></p> -->
                     </main>
                     <footer>
                     </footer>
@@ -102,12 +106,12 @@
                         <h2>Gallery</h2>
                     </header>
                     <main>
-                          <!-- paintings gallery  -->
-                          <div>
+                        <!-- paintings gallery  -->
+                        <div>
                             <div id="myBtnContainer">
-                                <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+                                <button class="btn" onclick="filterSelection('all')"> Show all</button>
                                 <button class="btn" onclick="filterSelection('boats')"> Boats</button>
-                                <button class="btn" onclick="filterSelection('flowers')"> Flowers</button>
+                                <button class="btn active" onclick="filterSelection('flowers')"> Flowers</button>
                                 <button class="btn" onclick="filterSelection('landscapes')"> Landscapes</button>
                                 <button class="btn" onclick="filterSelection('portrayal')"> Portrayal</button>
                             </div>
@@ -190,7 +194,7 @@
 
                                 <div class="column flowers">
                                     <div class="content">
-                                        <img src="/photos/Flowers0.JPG" alt="Flowers" style="width:56%">
+                                        <img src="/photos/Flowers0.JPG" alt="Flowers"  style="width:56%">
                                         <h4>Flowers</h4>
                                     </div>
                                 </div>

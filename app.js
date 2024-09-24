@@ -11,7 +11,7 @@ let ribbonsAnon = function ribbons() {
             14
         );
 
-     
+
     let divRibbons = document.getElementById("ribbons");
     //clear any previous image content
     divRibbons.innerHTML = "";
@@ -40,21 +40,19 @@ let ribbonsAnon = function ribbons() {
         imgI.style.borderWidth="2px";
         imgI.style.borderStyle= "outset";
         imgI.style.borderRadius= ""+topBp+"%"+(100-topBp)+"%"+
-                                   +bottomBp+"%"+(100-bottomBp)+"%/"+
-                                     +leftBp+"%"+ 
-                                     +rightBp+"%"+(100-rightBp)+"%"+
-                                     +(100-leftBp)+"%";
+            +bottomBp+"%"+(100-bottomBp)+"%/"+
+            +leftBp+"%"+ 
+            +rightBp+"%"+(100-rightBp)+"%"+
+            +(100-leftBp)+"%";
         divRibbons.append(imgI);
     }
 };
 
-window.onload = (ribbonsAnon);
+// window.onload = (ribbonsAnon);
 window.onresize = (ribbonsAnon);
 
 
 
-
-//gallery script
 filterSelection("all")
 function filterSelection(c) {
     var x, i;
@@ -87,12 +85,11 @@ function w3RemoveClass(element, name) {
     element.className = arr1.join(" ");
 }
 
-
 // Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-if(btnContainer !== null){
-    // console.log("active");
+function classActive(){
+    var btnContainer = document.getElementById("myBtnContainer");
     var btns = btnContainer.getElementsByClassName("btn");
+    btns[2].click();
     for (var i = 0; i < btns.length; i++) {
         btns[i].addEventListener("click", function(){
             var current = document.getElementsByClassName("active");
@@ -100,69 +97,86 @@ if(btnContainer !== null){
             this.className += " active";
         });
     }
-
 }
+window.onload = (classActive);
+
+function navbuttons(){
+    var navbuttons = document.getElementsByClassName("navbutton");
+    console.log(navbuttons);
+    console.log(navbuttons[0]);
+    for (let i=0; i < navbuttons.length; i++){
+        console.log("i is "+i);
+        navbuttons[i].style.backgroundImage = "url(\"/sprite/n"+i+".JPG\")";
+    }
+}
+
+window.onload =function (){
+    ribbonsAnon();
+    classActive();
+    navbuttons();
+}
+
 
 //Europeana API
 const searchEuropeanaRecords = async () => {
     const apiKey = "suckshusen";
     const searchQuery = document.getElementById("searchQuery").value;
-  
+
     // this is the API URL for searching Europeana records
     const url = new URL("https://api.europeana.eu/record/search.json");
     url.search = new URLSearchParams({
-      // this is your API key
-      wskey: apiKey,
-      // this is what you are looking for
-      query: searchQuery,
-      // let's make sure we always get previews
-      thumbnail: "true",
-      // this is the maximum number of results
-      rows: 5,
-      // randomise the results!
-      sort: "random",
-      // we don't want much information here, so let's keep it minimal
-      profile: "minimal"
+        // this is your API key
+        wskey: apiKey,
+        // this is what you are looking for
+        query: searchQuery,
+        // let's make sure we always get previews
+        thumbnail: "true",
+        // this is the maximum number of results
+        rows: 5,
+        // randomise the results!
+        sort: "random",
+        // we don't want much information here, so let's keep it minimal
+        profile: "minimal"
     }).toString();
-  
+
     const response = await fetch(url);
     const json = await response.json();
     return json;
-  };
-  
-  const showResults = (searchResults) => {
+};
+
+const showResults = (searchResults) => {
     const resultsCountElement = document.getElementById("resultsCount");
     resultsCountElement.textContent = searchResults.totalResults;
-  
+
     const previewsContainer = document.getElementById("previewsContainer");
     previewsContainer.innerHTML = "";
     for (const item of searchResults.items || []) {
-      const cardElement = document.createElement("div");
-      cardElement.classList.add("card", "m-3");
-      const imgElement = document.createElement("img");
-      imgElement.setAttribute("src", item.edmPreview);
-      imgElement.setAttribute("alt", item.title?.[0]);
-      imgElement.classList.add("card-img-top");
-      cardElement.appendChild(imgElement);
-      const cardBodyElement = document.createElement("div");
-      cardBodyElement.classList.add("card-body");
-      const cardTitleElement = document.createElement("strong");
-      cardTitleElement.classList.add("card-title");
-      cardTitleElement.textContent = item.title?.[0];
-      cardBodyElement.appendChild(cardTitleElement);
-      cardElement.appendChild(cardBodyElement);
-      previewsContainer.appendChild(cardElement);
-    }
-  
-    const resultsContainer = document.getElementById("resultsContainer");
-    resultsContainer.classList.remove("invisible");
-  };
-  
-  const handleSubmitSearch = async (event) => {
-    event.preventDefault();
-    const searchResults = await searchEuropeanaRecords();
-    showResults(searchResults);
-  };
-  
-  document.getElementById("search")
-  document.addEventListener("submit", handleSubmitSearch);
+        const cardElement = document.createElement("div");
+        cardElement.classList.add("card", "m-3");
+        const imgElement = document.createElement("img");
+        imgElement.setAttribute("src", item.edmPreview);
+        imgElement.setAttribute("alt", item.title?.[0]);
+                                imgElement.classList.add("card-img-top");
+                                cardElement.appendChild(imgElement);
+                                const cardBodyElement = document.createElement("div");
+                                cardBodyElement.classList.add("card-body");
+                                const cardTitleElement = document.createElement("strong");
+                                cardTitleElement.classList.add("card-title");
+                                cardTitleElement.textContent = item.title?.[0];
+                                cardBodyElement.appendChild(cardTitleElement);
+                                cardElement.appendChild(cardBodyElement);
+                                previewsContainer.appendChild(cardElement);
+                                }
+
+                                const resultsContainer = document.getElementById("resultsContainer");
+                                resultsContainer.classList.remove("invisible");
+                                };
+
+                                const handleSubmitSearch = async (event) => {
+                                event.preventDefault();
+                                const searchResults = await searchEuropeanaRecords();
+                                showResults(searchResults);
+                                };
+
+                                document.getElementById("search")
+                                document.addEventListener("submit", handleSubmitSearch);
