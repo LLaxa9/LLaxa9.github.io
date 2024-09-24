@@ -3,322 +3,331 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"> -->
         <link rel="stylesheet" href="style.css">
         <script src="app.js"></script>
         <title>About me</title>
     </head>
     <body>
-        <div id="frame_top"></div>
-        <div id="artisticHeader">
-            <div id="ribbons"></div>
-        </div>
-        <div id="frame">
-            <a href="#top">
-                <h1 id="logo">AA Gallery</h1>
-            </a>
-        </div>
-
-        <div id="container">
-            <header id="main-header">
-                <!-- the content of the header goes here -->
-                <nav>
-                    <!-- <h1 id="logo">AA Gallery</h1> -->
-                    <ul id="nav-ul">
-                        <li>
-                            <img src="/sprite/n0.JPG" alt="achievements button">
-                            <div>
-                                <a  href="#achievements" class="navbutton">
-                                    Achievements</a>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="/sprite/n1.JPG" alt="achievements button">
-                            <div>
-                                <a  href="#journey" class="navbutton">
-                                    Journey</a>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="/sprite/n2.JPG" alt="achievements button">
-                            <div>
-                                <a  href="#contact" class="navbutton">
-                                    Contact</a>
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
-
-            </header>
-            <!-- < div id="main-content"> -->
-            <main>    
-                <div>
-                    <article>
-                        <header>
-                            <br>
-                            <!-- Article's header goes here -->
-                            <h2>Bio</h2>
-                            <h4> Read time: 5 minutes. Gazing at paintings: inestimable.</h4>
-                        </header>
-                        <main>
-                            <img src="/photos/0Profile.JPG" id="profile" alt="Profile picture">
+        <header id="main-header">
+            <!-- the content of the header goes here -->
+            <div id="banner">
+                <div id="artisticHeader">
+                    <div id="ribbons"></div>
+                </div>
+            </div>
+            <nav>
+                <div id="border">
+                    <a href="#top">
+                        <h1 id="logo">AA Gallery</h1>
+                    </a>
+                </div>
+                <ul id="nav-ul">
+                    <li>
+                        <img src="/sprite/n0.JPG" alt="achievements button">
+                        <div>
+                            <a  href="#achievements" class="navbutton">
+                                Achievements</a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="/sprite/n1.JPG" alt="achievements button">
+                        <div>
+                            <a  href="#journey" class="navbutton">
+                                Journey</a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="/sprite/n2.JPG" alt="achievements button">
+                        <div>
+                            <a  href="#contact" class="navbutton">
+                                Contact</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>  
+            <div id="main-content">
+                <article>
+                    <header>
+                        <br>
+                        <!-- Article's header goes here -->
+                        <h2>Bio</h2>
+                        <h4> Read time: 5 minutes. Gazing at paintings: inestimable.</h4>
+                    </header>
+                    <main>
+                        <div id="AAprofile">
+                            <img src="/photos/0Profile.JPG" alt="AAprofile" style="width:100%">
+                            <p><a href="#contact" class="navbutton"> AA, painter</a></p>
+                        </div>
+                        <div>
                             <p>Born in 1956 in Romania, the artist’s journey is a testament to resilience and passion. His diverse career path includes roles as an accountant, administrator, naval pilot officer, canteen head, and guardsman. These experiences have shaped his unique perspective and drive to push himself and inspire others to achieve their best.</p>
-                            <p> After retirement due to illness,his passion for creativity never waned. He attended a painting course at "Dunarea de Jos" Cultural Center’s Art School, where he honed his artistic skills.</p>
+                            <p>After retirement due to illness,his passion for creativity never waned. He attended a painting course at "Dunarea de Jos" Cultural Center’s Art School, where he honed his artistic skills.</p>
                             <p>Today, his paintings have captivated art aficionados in a couple European countries, reflecting his rich life experiences and unwavering passion for art.</p>
+                        </div>
 
-                        </main>
-                        <footer>
-                            <h5>latest update: 16-09-2024</h5>
-                        </footer>
-                    </article>
-                    <article id="statement">
-                        <header>
-                            <br>
-                            <!-- Article's header goes here -->
-                            <h2>Artist statement</h2>
-                        </header>
-                        <main>
-                            <p>I create art becouse it relaxes me. My work explores themes of landscapes.</p>
-                        </main>
-                        <footer>
-                        </footer>
-                    </article>
-                    <article id="achievements">
-                        <header>
-                            <br>
-                            <!-- Article's header goes here -->
-                            <h2>Achievements</h2>
-                        </header>
-                        <main>
-                            <p>As a coxman, his adventurous spirit led him to navigate from Romania to the far reaches of India in the east and Brazil in the west.</p>
-                            <p>His dedication and skills as a head of a canteen unit were recognised when the unit achieved second place at the national level in a canteen units competition organised by the General Union of Trade Unions.</p>
-                            <!-- paintings gallery  -->
-                            <div class="gallery">
-                                <h2>Gallery</h2>
+                    </main>
+                    <footer>
+                        <h5>latest update: 16-09-2024</h5>
+                    </footer>
+                </article>
+                <article id="statement">
+                    <header>
+                        <br>
+                        <!-- Article's header goes here -->
+                        <h2>Artist statement</h2>
+                    </header>
+                    <main>
+                        <p>I create art becouse it relaxes me. My work explores themes of landscapes.</p>
+                    </main>
+                    <footer>
+                    </footer>
+                </article>
+                <article id="achievements">
+                    <header>
+                        <br>
+                        <!-- Article's header goes here -->
+                        <h2>Achievements</h2>
+                    </header>
+                    <main>
+                        <p>As a coxman, his adventurous spirit led him to navigate from Romania to the far reaches of India in the east and Brazil in the west.</p>
+                        <!-- paintings gallery  -->
+                        <div class="gallery">
+                            <h2>Gallery</h2>
+                            <div id="myBtnContainer">
+                                <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+                                <button class="btn" onclick="filterSelection('boats')"> Boats</button>
+                                <button class="btn" onclick="filterSelection('landscapes')"> Landscapes</button>
+                                <button class="btn" onclick="filterSelection('flowers')"> Flowers</button>
+                            </div>
 
-                                <div id="myBtnContainer">
-                                    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-                                    <button class="btn" onclick="filterSelection('boats')"> Boats</button>
-                                    <button class="btn" onclick="filterSelection('landscapes')"> Landscapes</button>
-                                    <button class="btn" onclick="filterSelection('flowers')"> Flowers</button>
+                            <!-- Portfolio Gallery Grid -->
+                            <div class="row">
+                                <div class="column boats">
+                                    <div class="content">
+                                        <img src="/photos/Boats0.JPG" alt="Awaiting" style="width:100%">
+                                        <h4>Awaiting</h4>
+                                    </div>
+                                </div>
+                                <div class="column boats">
+                                    <div class="content">
+                                        <img src="/photos/Boats1.JPG" alt="Mashed" style="width:56%">
+                                        <h4>Mashed</h4>
+                                    </div>
+                                </div>
+                                <div class="column boats">
+                                    <div class="content">
+                                        <img src="/photos/Boats2.JPG" alt="Venice" style="width:100%">
+                                        <h4>Venice</h4>
+                                    </div>
+                                </div>
+                                <div class="column boats">
+                                    <div class="content">
+                                        <img src="/photos/Boats3.JPG" alt="Sunset" style="width:100%">
+                                        <h4>Sunset</h4>
+                                    </div>
+                                </div>
+                                <div class="column boats">
+                                    <div class="content">
+                                        <img src="/photos/Boats4.JPG" alt="Small_boat" style="width:100%">
+                                        <h4>Small boat</h4>
+                                    </div>
                                 </div>
 
-                                <!-- Portfolio Gallery Grid -->
-                                <div class="row">
-                                    <div class="column boats">
-                                        <div class="content">
-                                            <img src="/photos/Boats0.JPG" alt="Awaiting" style="width:100%">
-                                            <h4>Awaiting</h4>
-                                        </div>
+                                <div class="column landscapes">
+                                    <div class="content">
+                                        <img src="/photos/Landscape0.JPG" alt="Winter" style="width:100%">
+                                        <h4>Winter</h4>
                                     </div>
-                                    <div class="column boats">
-                                        <div class="content">
-                                            <img src="/photos/Boats1.JPG" alt="Mashed" style="width:56%">
-                                            <h4>Mashed</h4>
-                                        </div>
+                                </div>
+                                <div class="column landscapes">
+                                    <div class="content">
+                                        <img src="/photos/Landscape1.JPG" alt="Sunrise" style="width:100%">
+                                        <h4>Sunrise</h4>
                                     </div>
-                                    <div class="column boats">
-                                        <div class="content">
-                                            <img src="/photos/Boats2.JPG" alt="Venice" style="width:100%">
-                                            <h4>Venice</h4>
-                                        </div>
+                                </div>
+                                <div class="column landscapes">
+                                    <div class="content">
+                                        <img src="/photos/Landscape2.JPG" alt="Barns" style="width:100%">
+                                        <h4>Barns</h4>
                                     </div>
-                                    <div class="column boats">
-                                        <div class="content">
-                                            <img src="/photos/Boats3.JPG" alt="Sunset" style="width:100%">
-                                            <h4>Sunset</h4>
-                                        </div>
+                                </div>
+                                <div class="column landscapes">
+                                    <div class="content">
+                                        <img src="/photos/Landscape3.JPG" alt="Delta village" style="width:100%">
+                                        <h4>Delta village</h4>
                                     </div>
-                                    <div class="column boats">
-                                        <div class="content">
-                                            <img src="/photos/Boats4.JPG" alt="Small_boat" style="width:100%">
-                                            <h4>Small boat</h4>
-                                        </div>
+                                </div>
+                                <div class="column landscapes">
+                                    <div class="content">
+                                        <img src="/photos/Landscape4.JPG" alt="Church" style="width:100%">
+                                        <h4>Church</h4>
                                     </div>
+                                </div>
 
-                                    <div class="column landscapes">
-                                        <div class="content">
-                                            <img src="/photos/Landscape0.JPG" alt="Winter" style="width:100%">
-                                            <h4>Winter</h4>
-                                        </div>
+                                <div class="column flowers">
+                                    <div class="content">
+                                        <img src="/photos/Flowers0.JPG" alt="Flowers" style="width:56%">
+                                        <h4>Flowers</h4>
                                     </div>
-                                    <div class="column landscapes">
-                                        <div class="content">
-                                            <img src="/photos/Landscape1.JPG" alt="Sunrise" style="width:100%">
-                                            <h4>Sunrise</h4>
-                                        </div>
+                                </div>
+                                <div class="column flowers">
+                                    <div class="content">
+                                        <img src="/photos/Flowers1.JPG" alt="Flowers" style="width:56%">
+                                        <h4>Flowers</h4>
                                     </div>
-                                    <div class="column landscapes">
-                                        <div class="content">
-                                            <img src="/photos/Landscape2.JPG" alt="Barns" style="width:100%">
-                                            <h4>Barns</h4>
-                                        </div>
+                                </div>
+                                <div class="column flowers">
+                                    <div class="content">
+                                        <img src="/photos/Flowers2.JPG" alt="Chrysanthems" style="width:100%">
+                                        <h4>Chrysanthems</h4>
                                     </div>
-                                    <div class="column landscapes">
-                                        <div class="content">
-                                            <img src="/photos/Landscape3.JPG" alt="Delta village" style="width:100%">
-                                            <h4>Delta village</h4>
-                                        </div>
+                                </div>
+                                <div class="column flowers">
+                                    <div class="content">
+                                        <img src="/photos/Flowers3.JPG" alt="Poppy" style="width:56%">
+                                        <h4>Poppy</h4>
                                     </div>
-                                    <div class="column landscapes">
-                                        <div class="content">
-                                            <img src="/photos/Landscape4.JPG" alt="Church" style="width:100%">
-                                            <h4>Church</h4>
-                                        </div>
-                                    </div>
-
-                                    <div class="column flowers">
-                                        <div class="content">
-                                            <img src="/photos/Flowers0.JPG" alt="Flowers" style="width:56%">
-                                            <h4>Flowers</h4>
-                                        </div>
+                                </div>
+                                <div class="column flowers">
+                                    <div class="content">
+                                        <img src="/photos/Flowers4.JPG" alt="Sunflowers" style="width:100%">
+                                        <h4>Sunflowers</h4>
                                     </div>
                                     <div class="column flowers">
                                         <div class="content">
-                                            <img src="/photos/Flowers1.JPG" alt="Flowers" style="width:56%">
-                                            <h4>Flowers</h4>
-                                        </div>
-                                    </div>
-                                    <div class="column flowers">
-                                        <div class="content">
-                                            <img src="/photos/Flowers2.JPG" alt="Chrysanthems" style="width:100%">
-                                            <h4>Chrysanthems</h4>
-                                        </div>
-                                    </div>
-                                    <div class="column flowers">
-                                        <div class="content">
-                                            <img src="/photos/Flowers3.JPG" alt="Poppy" style="width:56%">
-                                            <h4>Poppy</h4>
-                                        </div>
-                                    </div>
-                                    <div class="column flowers">
-                                        <div class="content">
-                                            <img src="/photos/Flowers4.JPG" alt="Sunflowers" style="width:100%">
+                                            <img src="/photos/Flowers5.JPG" alt="Sunflowers" style="width:100%">
                                             <h4>Sunflowers</h4>
                                         </div>
+                                        <div class="content"></div>
+                                        <img src="/photos/Flowers6.JPG" alt="Sunflowers" style="width:100%">
+                                        <h4>Sunflowers</h4>
                                     </div>
-
-                                    <!-- END GRID -->
-                                </div>
-
-                                <!-- END Gallery -->
-                            </div>
-
-                        </main>
-                        <footer>
-                        </footer>
-                    </article>
-                    <article>
-                        <br>
-                        <header>
-                            <!-- Article's header goes here -->
-                            <h2>Inspiration and Influences</h2>
-                        </header>
-                        <main>
-                            <p>My inspiration comes from spending time </p>
-                            <p>I am particulraly influenced by artists</p>
-                            <div class="container px-4 container-sm">
-                                <!-- Europeana API-->
-
-                                <div id="resultsContainer" class="invisible">
-                                    <div class="alert alert-info" role="alert">
-                                        At <a  href="https://www.europeana.eu/en/search?page=1&view=grid&query=Impressionism%20oil%20paintings"> www.Europeana.eu </a>
-                                        there are <strong id="resultsCount"></strong> results searching for "Impressionism oil paintings"
-                                    </div>
-                                    <div id="previewsContainer" class="card-group">
-
-                                    </div>
+                                    <div class="content"></div>
+                                    <img src="/photos/Flowers7.JPG" alt="Sunflowers" style="width:100%">
+                                    <h4>Sunflowers</h4>
                                 </div>
                             </div>
-                            <!-- <europeana> -->
+                            <!-- END GRID -->
+                        </div>
+                        <!-- END Gallery -->
+                    </main>
+                    <footer>
+                    </footer>
+                </article>
+                <article>
+                    <br>
+                    <header>
+                        <!-- Article's header goes here -->
+                        <h2>Inspiration and Influences</h2>
+                    </header>
+                    <main>
+                        <p>My inspiration comes from spending time </p>
+                        <p>I am particulraly influenced by artists</p>
+                        <div class="container px-4 container-sm">
+                            <!-- Europeana API-->
+                            <form id="search">
+                                <div class="mb-3">
+                                    <label for="searchQuery" class="form-label">Then, let's look for...</label>
+                                    <input required type="text" name="searchQuery" id="searchQuery" value="impresionism" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="submit" value="Search!" class="btn btn-primary">
+                                </div>
+                            </form>
 
-                        </main>
-                        <footer>
-                        </footer>
-                    </article>
+                            <div id="resultsContainer" class="invisible">
+                                <div class="alert alert-info" role="alert">
+                                    At <a  href="https://www.europeana.eu/en/search?page=1&view=grid&query=Impressionism%20oil%20paintings"> www.Europeana.eu </a>
+                                    there are <strong id="resultsCount"></strong> results searching for "Impressionism oil paintings"
+                                </div>
+                                <div id="previewsContainer" class="card-group">
 
-                    <article id="journey">
-                        <header>
-                            <br>
-                            <!-- Article's header goes here -->
-                            <h2>Journey</h2>
-                        </header>
-                        <main>
-                            <p>I began to express artistically by pyrography (woodburning).</p>
-                            <p>I studied more advanced techniques at the institute and have exhibited my work</p>
-                        </main>
-                        <footer>
-                        </footer>
-
-                    </article>
-
-                    <article>
-                        <header>
-                            <br>
-                            <!-- Article's header goes here -->
-                            <h2>Personal touch</h2>
-                        </header>
-                        <main>
-                            <p>When I'm not painting, I enjoy spending time with my familly, listening music, walks in park</p>
-                        </main>
-                        <footer>
-                        </footer>
-                    </article>
-                    <div>
-                        <div id="contact">
-                            <!-- main content of the website can go here -->
-                            <hr>
-                            <div id="Contact">
-                                <h2>Contact</h2>
-                                <p style="text-align:center">Feel free to reach out to me, or visit my social media.</p>
-                                <form action="" method="">
-                                    <label for="first_name">First Name:</label>
-                                    <input type="text" id="first_name" name="first_name" required>
-                                    <br>
-
-                                    <label for="last_name">Last Name:</label>
-                                    <input type="text" id="last_name" name="last_name" required>
-                                    <br>
-
-                                    <label for="email">e-mail:</label>
-                                    <input type="email" name="email" id="email">
-                                    <br>
-
-                                    <br>
-                                    <label for="message">Message</label>
-                                    <textarea name="bio" id="bio" cols="50" rows="10"></textarea>
-
-                                    <input type="checkbox" name="subscribe" id="subscribe">
-                                    <label for="subscribe">Subscribe to our newsletter</label>
-
-                                    <input type="submit" value="Send!">
-                                </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>    
-                <footer>
-                    <!-- footer goes here -->
-                    <h2>AA Gallery</h2>
-                    <section>
-                        <nav>
-                            <ul id="footer-ul">
-                                <div> 
-                                    <li><a href=""></a>Home</li>
-                                    <li><a href=""></a>About us</li>
-                                    <li><a href=""></a>Contact</li>
-                                    <li><a href=""></a>Careers</li>
-                                </div>
-                                <div>
-                                    <li><a href=""></a>Priacy Policy</li>
-                                    <li><a href=""></a>Terms & Conditions</li>
-                                    <li><a href=""></a>Cookie Policy</li>
-                                </div>
-                            </ul>
-                        </nav>
-                    </section>
-                </footer>
-            </main>
-        </div>
+                        <!-- <europeana> -->
+
+                    </main>
+                    <footer>
+                    </footer>
+                </article>
+
+                <article id="journey">
+                    <header>
+                        <br>
+                        <!-- Article's header goes here -->
+                        <h2>Journey</h2>
+                    </header>
+                    <main>
+                        <p>I began to express artistically by pyrography (woodburning).</p>
+                        <p>I studied more advanced techniques at the institute and have exhibited my work</p>
+                    </main>
+                    <footer>
+                    </footer>
+                </article>
+                <article>
+                    <header>
+                        <br>
+                        <!-- Article's header goes here -->
+                        <h2>Personal touch</h2>
+                    </header>
+                    <main>
+                        <p>When I'm not painting, I enjoy spending time with my familly, listening music, walks in park</p>
+                    </main>
+                    <footer>
+                    </footer>
+                </article>
+            </div>
+            <div id="Contact">
+                <!-- main content of the website can go here -->
+                <hr>
+                <h2>Contact</h2>
+                <p style="text-align:center">Feel free to reach out to me, or visit my social media.</p>
+                <form action="" method="">
+                    <label for="first_name">First Name:</label>
+                    <input type="text" id="first_name" name="first_name" required>
+                    <br>
+
+                    <label for="last_name">Last Name:</label>
+                    <input type="text" id="last_name" name="last_name" required>
+                    <br>
+
+                    <label for="email">e-mail:</label>
+                    <input type="email" name="email" id="email">
+                    <br>
+
+                    <br>
+                    <label for="message">Message</label>
+                    <textarea name="bio" id="bio" cols="50" rows="10"></textarea>
+
+                    <input type="checkbox" name="subscribe" id="subscribe">
+                    <label for="subscribe">Subscribe to our newsletter</label>
+
+                    <input type="submit" value="Send!">
+                </form>
+            </div>
+        </main>
+        <footer>
+            <!-- footer goes here -->
+            <h2>AA Gallery</h2>
+            <section>
+                <nav>
+                    <ul id="footer-ul">
+                        <div> 
+                            <li><a href=""></a>Home</li>
+                            <li><a href=""></a>About us</li>
+                            <li><a href=""></a>Contact</li>
+                            <li><a href=""></a>Careers</li>
+                        </div>
+                        <div>
+                            <li><a href=""></a>Priacy Policy</li>
+                            <li><a href=""></a>Terms & Conditions</li>
+                            <li><a href=""></a>Cookie Policy</li>
+                        </div>
+                    </ul>
+                </nav>
+            </section>
+        </footer>
     </body>
 </html>

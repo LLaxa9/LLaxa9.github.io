@@ -17,58 +17,10 @@ body{
       1px -1px 0px black,
       -1px -1px 0px black;
 }
-#artisticHeader{
-  display: flex
-}
-
-#ribbons{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center ;
-  gap: 1vw;
-  width: 100vw;
-}
-
-
-
-#frame{
-  height: 7vh;
-  background-image: linear-gradient(#cfbaa0, #f8f0e4, #bdac91);
-  position: sticky;
-  top: 0;
-}
-
-
-ul{
-  margin:0px
-}
-
-body> div> header {
-  /* background-color: rgb(46, 93, 230); */
-  /* background-color: white; */
-  /* color: white; */
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  position: sticky;
-  top: 0;
-}
-
-body> div> header> nav> ul{
-  display: flex;
-  list-style: none;
-  text-decoration: none;
-  justify-content: center ;
-  /* gap:20px; */
-  position: relative;
-  position: sticky;
-  top: 0;
-  height: 60px;
-}
 
 /* https://css-pattern.com/ */
 #artisticHeader{
+  display: flex;
   height: 30vh;
   /* height:300px; */
   --s: 1vh; /* control the size*/
@@ -84,6 +36,51 @@ body> div> header> nav> ul{
   background-size: calc(2*(var(--s) + var(--g))) calc(2*(var(--s) + var(--g)));
 }
 
+#ribbons{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center ;
+  gap: 1vw;
+  width: 100vw;
+}
+
+
+
+#border{
+  height: 7vh;
+  background-image: linear-gradient(#cfbaa0, #f8f0e4 30%, #bdac91);
+  position: sticky;
+  top: 0;
+}
+
+
+ul{
+  margin:0px
+}
+
+body > header {
+  /* background-color: rgb(46, 93, 230); */
+  /* background-color: white; */
+  /* color: white; */
+  /* display: flex; */
+  align-items: center;
+  justify-content: space-around;
+  /* position: sticky; */
+  top: 0;
+}
+
+body > header > nav > ul{
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+  justify-content: center ;
+  /* gap:20px; */
+  position: relative;
+  position: sticky;
+  top: 0;
+  height: 60px;
+}
 
 #nav-ul > li {
   padding: 8px;
@@ -117,16 +114,34 @@ body> div> header> nav> ul{
       -1px -1px 0px black;
 }
 
-#container{
+/* #container{
   padding:5vw;
-}
+} */
+
 #main-content{
   display: inline-block;
   justify-content: space-around;
 }
 
-img#profile{
-  float:right;
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+#AAprofile {
+  /* display: block; */
+  float: right;
+   width: 33.3%;
+  /* margin-bottom: 16px;*/
+  padding: 0 8px;  
+}
+} 
+
+@media only screen and (max-width: 768px) {
+#AAprofile {
+/* For tablets: */
+float: right;
+width: 100%;
+margin-bottom: 16px;
+padding: 0 8px;
+  }
 }
 
 form{
@@ -136,7 +151,7 @@ h2{
   text-align: center;
 }
 
-body> div> footer {
+body> footer {
   background-color: rgb(46, 93, 230);
   display: flex;
 }
@@ -147,11 +162,11 @@ body> div> footer {
   list-style: none;
 }
 
-#footer-ul > div > li {
+#footer-ul> li {
   margin-left: 12px;
 
 }
-#footer-ul > div > li > a {
+#footer-ul> li> a {
   color: white;
   text-decoration: none;
 }
@@ -185,7 +200,7 @@ body> div> footer {
 /* Create three equal columns that floats next to each other */
 .column {
   width: 33.33%;
-  display: none; /* Hide all elements by default */
+  /* display: none; Hide all elements by default */
 }
 
 /* Clear floats after rows */ 
@@ -263,3 +278,71 @@ body> div> footer {
 .card-img,.card-img-bottom,.card-img-top {
   width: 100%
 }
+
+
+
+/*Meet*/
+/* html {
+  box-sizing: border-box; }  */
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+
+
+
+/* .column {
+  float: left;
+  /* width: 33.3%; */
+  /* margin-bottom: 16px;
+  padding: 0 8px; 
+} 
+*/
+
+@media screen and (max-width: 650px) {
+  /* .column {
+    width: 100%;
+    display: block;
+  } */
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* .container {
+  padding: 0 16px;
+} */
+
+/* .container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+} */
+
+/* .title {
+  color: grey;
+} */
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+
+
+
+
