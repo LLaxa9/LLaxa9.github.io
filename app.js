@@ -98,7 +98,7 @@ function classActive(){
         });
     }
 }
-window.onload = (classActive);
+// window.onload = (classActive);
 
 function navbuttons(){
     var navbuttons = document.getElementsByClassName("navbutton");
