@@ -102,10 +102,7 @@ function classActive(){
 
 function navbuttons(){
     var navbuttons = document.getElementsByClassName("navbutton");
-    console.log(navbuttons);
-    console.log(navbuttons[0]);
     for (let i=0; i < navbuttons.length; i++){
-        console.log("i is "+i);
         navbuttons[i].style.backgroundImage = "url(\"/sprite/n"+i+".JPG\")";
     }
 }
