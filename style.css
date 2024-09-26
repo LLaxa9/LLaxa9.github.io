@@ -3,8 +3,12 @@
   /* For desktop: */
   #AAprofile {
       float: right;
-      width: 33.3%;
+      width: 33%;
       padding: 0 8px;  
+  }
+
+  img{
+    width: 33.3%;
   }
 } 
 
@@ -28,7 +32,9 @@ body{
   font-size: 1.7vw;
 }
 
-
+/* img{
+  width: 100%;
+} */
 /* https://css-pattern.com/ */
 .banner{
   --s: 1vh; 
@@ -139,7 +145,8 @@ body > header > nav > ul{
 body>main  {
   display: inline-block;
   justify-content: space-around;
-  padding:3vw;
+  margin: auto;
+  max-width: 95vw;
 }
 
 
