@@ -6,6 +6,18 @@
       width: 33%;
       padding: 0 8px;  
   }
+  h1{
+    font-size: 1.8em;
+  }
+  h2{
+    font-size: 1.4em;
+  }
+  h3{
+    font-size: 1.2em;
+  }
+  p{
+    font-size: 1em;
+    }
 
   img{
     width: 33.3%;
@@ -21,6 +33,19 @@
       padding: 0 8px;
   }
 
+  h1{
+    font-size: 2.6em;
+  }
+  h2{
+    font-size: 2.2em;
+  }
+  h3{
+    font-size: 2em;
+  }
+  p{
+    font-size: 1.8em;
+    }
+
   #ribbons{
       height:25vh;
   }
@@ -30,11 +55,19 @@ body{
   font-family: Helvetica, Arial, sans-serif;
   background-color: #f1f1f1;
   font-size: 1.7vw;
+  position: relative;
+  min-width: 100%;
+  overflow-x: hidden;
+  z-index: 1;
+  /* font: 14px / 1.3 InspireTWDC, Helvetica, Arial, sans-serif; */
+  color: #2e3760;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.3;
 }
 
-/* img{
-  width: 100%;
-} */
+
 /* https://css-pattern.com/ */
 .banner{
   --s: 1vh; 
@@ -148,6 +181,20 @@ body>main  {
   margin: auto;
   max-width: 95vw;
 }
+
+.containerImages{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center ;
+  gap: 1vw;
+  width: 95vw;
+}
+
+img{
+  max-width: 95vw;
+  max-height: 95vh;
+}
+
 
 
 form{
