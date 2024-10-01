@@ -153,27 +153,27 @@ const showResults = (searchResults) => {
         const imgElement = document.createElement("img");
         imgElement.setAttribute("src", item.edmPreview);
         imgElement.setAttribute("alt", item.title?.[0]);
-                                imgElement.classList.add("card-img-top");
-                                cardElement.appendChild(imgElement);
-                                const cardBodyElement = document.createElement("div");
-                                cardBodyElement.classList.add("card-body");
-                                const cardTitleElement = document.createElement("strong");
-                                cardTitleElement.classList.add("card-title");
-                                cardTitleElement.textContent = item.title?.[0];
-                                cardBodyElement.appendChild(cardTitleElement);
-                                cardElement.appendChild(cardBodyElement);
-                                previewsContainer.appendChild(cardElement);
-                                }
+        imgElement.classList.add("card-img-top");
+        cardElement.appendChild(imgElement);
+        const cardBodyElement = document.createElement("div");
+        cardBodyElement.classList.add("card-body");
+        const cardTitleElement = document.createElement("strong");
+        cardTitleElement.classList.add("card-title");
+        cardTitleElement.textContent = item.title?.[0];
+        cardBodyElement.appendChild(cardTitleElement);
+        cardElement.appendChild(cardBodyElement);
+        previewsContainer.appendChild(cardElement);
+        }
 
-                                const resultsContainer = document.getElementById("resultsContainer");
-                                resultsContainer.classList.remove("invisible");
-                                };
+const resultsContainer = document.getElementById("resultsContainer");
+resultsContainer.classList.remove("invisible");
+};
 
-                                const handleSubmitSearch = async (event) => {
-                                event.preventDefault();
-                                const searchResults = await searchEuropeanaRecords();
-                                showResults(searchResults);
-                                };
+const handleSubmitSearch = async (event) => {
+event.preventDefault();
+const searchResults = await searchEuropeanaRecords();
+showResults(searchResults);
+};
 
-                                document.getElementById("search")
-                                document.addEventListener("submit", handleSubmitSearch);
+document.getElementById("search")
+document.addEventListener("submit", handleSubmitSearch);

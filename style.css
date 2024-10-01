@@ -7,20 +7,20 @@
       padding: 0 8px;  
   }
   h1{
-    font-size: 1.8em;
+      font-size: 1.8em;
   }
   h2{
-    font-size: 1.4em;
+      font-size: 1.4em;
   }
   h3{
-    font-size: 1.2em;
+      font-size: 1.2em;
   }
   p{
-    font-size: 1em;
-    }
+      font-size: 1em;
+  }
 
   img{
-    width: 33.3%;
+      width: 33.3%;
   }
 } 
 
@@ -34,17 +34,17 @@
   }
 
   h1{
-    font-size: 2.6em;
+      font-size: 2.6em;
   }
   h2{
-    font-size: 2.2em;
+      font-size: 2.2em;
   }
   h3{
-    font-size: 2em;
+      font-size: 2em;
   }
   p{
-    font-size: 1.8em;
-    }
+      font-size: 1.8em;
+  }
 
   #ribbons{
       height:25vh;
@@ -188,6 +188,7 @@ body>main  {
   justify-content: center ;
   gap: 1vw;
   width: 95vw;
+  margin: auto;
 }
 
 img{
@@ -205,7 +206,7 @@ h2{
 }
 
 body> footer {
-  background-color: rgb(46, 93, 230);
+  /* background-color: rgb(46, 93, 230); */
   display: flex;
 }
 
