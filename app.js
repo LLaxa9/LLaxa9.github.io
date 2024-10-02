@@ -98,7 +98,6 @@ function classActive(){
         });
     }
 }
-// window.onload = (classActive);
 
 function navbuttons(){
     var navbuttons = document.getElementsByClassName("navbutton");
@@ -115,6 +114,9 @@ function fbPostWidth(){
                                             /3);}
 }
 
+window.onresize =function (){
+    fbPostWidth();
+} 
 window.onload =function (){
     ribbonsAnon();
     classActive();
