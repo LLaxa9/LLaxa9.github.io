@@ -107,10 +107,20 @@ function navbuttons(){
     }
 }
 
+// adjust data-width attribute of facebook div elements to viewport/3
+function fbPostWidth(){
+    var fbPosts= document.getElementsByClassName("fb-post")
+    for(let i=0; i<fbPosts.length; i++){
+        fbPosts[i].dataset.width=Math.floor((document.documentElement.clientWidth || 0, window.innerWidth || 0)
+                                            /3);}
+}
+
 window.onload =function (){
     ribbonsAnon();
     classActive();
     navbuttons();
+    fbPostWidth();
+
 }
 
 
@@ -165,15 +175,16 @@ const showResults = (searchResults) => {
         previewsContainer.appendChild(cardElement);
         }
 
-const resultsContainer = document.getElementById("resultsContainer");
-resultsContainer.classList.remove("invisible");
-};
+        const resultsContainer = document.getElementById("resultsContainer");
+        resultsContainer.classList.remove("invisible");
+        };
 
-const handleSubmitSearch = async (event) => {
-event.preventDefault();
-const searchResults = await searchEuropeanaRecords();
-showResults(searchResults);
-};
+    const handleSubmitSearch = async (event) => {
+    event.preventDefault();
+    const searchResults = await searchEuropeanaRecords();
+    showResults(searchResults);
+    };
 
-document.getElementById("search")
-document.addEventListener("submit", handleSubmitSearch);
+    document.getElementById("search")
+    document.addEventListener("submit", handleSubmitSearch);
+
