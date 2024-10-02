@@ -110,7 +110,7 @@ function navbuttons(){
 function fbPostWidth(){
     var fbPosts= document.getElementsByClassName("fb-post")
     for(let i=0; i<fbPosts.length; i++){
-        fbPosts[i].dataset.width=Math.floor((document.documentElement.clientWidth || 0, window.innerWidth || 0)
+        fbPosts[i].dataset.width=Math.floor(Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
                                             /3);}
 }
 
