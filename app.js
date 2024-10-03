@@ -141,7 +141,7 @@ const searchEuropeanaRecords = async () => {
         // let's make sure we always get previews
         thumbnail: "true",
         // this is the maximum number of results
-        rows: 5,
+        rows: 6,
         // randomise the results!
         sort: "random",
         // we don't want much information here, so let's keep it minimal
@@ -181,12 +181,12 @@ const showResults = (searchResults) => {
         resultsContainer.classList.remove("invisible");
         };
 
-    const handleSubmitSearch = async (event) => {
-    event.preventDefault();
-    const searchResults = await searchEuropeanaRecords();
-    showResults(searchResults);
-    };
+        const handleSubmitSearch = async (event) => {
+        event.preventDefault();
+        const searchResults = await searchEuropeanaRecords();
+        showResults(searchResults);
+        };
 
-    document.getElementById("search")
-    document.addEventListener("submit", handleSubmitSearch);
+        document.getElementById("search")
+        document.addEventListener("submit", handleSubmitSearch);
 

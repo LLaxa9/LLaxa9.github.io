@@ -53,7 +53,7 @@
 
 body{
   font-family: Helvetica, Arial, sans-serif;
-  background-color: #f1f1f1;
+  /* background-color: #f1f1f1; */
   font-size: 1.7vw;
   position: relative;
   min-width: 100%;
@@ -65,6 +65,8 @@ body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.3;
+  background-image: url("/sprite/knotted-timber-staggered-1995-mm-architextures.jpg"); 
+  /* source https://architextures.org/textures/category/wood */
 }
 
 
@@ -175,11 +177,23 @@ body > header > nav > ul{
 
 
 
-body>main  {
+/* body>main  {
+display: inline-block;
+justify-content: space-around;
+margin: 15vw;
+max-width: 95vw;
+background-color: #f1f1f1;
+width:60vw;
+} */
+
+.main-content{
   display: inline-block;
   justify-content: space-around;
-  margin: auto;
+  margin: 15vw;
   max-width: 95vw;
+  background-color: #f1f1f1;
+  width:60vw;
+  border-radius: 20px;
 }
 
 .containerImages{
@@ -187,7 +201,7 @@ body>main  {
   flex-wrap: wrap;
   justify-content: center ;
   gap: 1vw;
-  width: 95vw;
+  /* width: 95vw; */
   margin: auto;
 }
 
@@ -250,6 +264,7 @@ body> footer {
 .column {
   width: 33.33%;
   display: none; /* Hide all elements by default */
+  /* background-image: url("/sprite/knotted-timber-staggered-1995-mm-architextures.jpg"); */
 }
 
 /* Clear floats after rows */ 
@@ -261,14 +276,14 @@ body> footer {
 
 /* Content */
 .content {
-  background-color: white;
+  /* background-color: white; */
   padding: 2px;
   position: relative;
   text-align: center;
 }
 
 
-.content> h4{
+.content> h4, div.card-body{
   position: absolute;
   bottom: 0;
   color: #fff; /* White text */
@@ -284,7 +299,7 @@ body> footer {
   transition: opacity 0.3s;
 }
 
-.content:hover h4{
+.content:hover h4, div.card-body:hover{
   opacity: 1;
 }
 
@@ -311,74 +326,52 @@ body> footer {
   color: white;
 }
 
-
 /* Europeana style */
-
+/* @import "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"; */
 
 .invisible {
   visibility: hidden!important
 }
 
+@media (min-width: 550px) {
+  .card-group {
+      display:flex;
+      flex-wrap: wrap;
 
+  }
+  .m-3{
+      max-width: 30vw;
+  }
+}
 
 .card-img,.card-img-bottom,.card-img-top {
   width: 100%
+
+}
+.card-img-top {
+  border-top-left-radius: var(--bs-card-inner-border-radius);
+  border-top-right-radius: var(--bs-card-inner-border-radius)
+}
+.card-group>.card:not(:last-child) .card-header,.card-group>.card:not(:last-child) .card-img-top {
+  border-top-right-radius: 0
 }
 
+/*
+div.card-body{
+color:#fff;
+opacity: 0;
+transition: opacity 0.3s;
+}
 
+div.card-body:hover{
+color: #fff; /* White text */
+/* text-shadow:
+1px  1px 0px black,
+-1px  1px 0px black,
+1px -1px 0px black,
+-1px -1px 0px black;
+opacity: 1; */
+/*
+}
 
-/*Meet*/
-/* html {
-box-sizing: border-box; }  */
-
-/*   
-*, *:before, *:after {
-box-sizing: inherit;
-}  */
-
-
-
-
-
-/* .column {
-float: left;
-/* width: 33.3%; */
-/* margin-bottom: 16px;
-padding: 0 8px; 
-} 
 */
-
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.container {
-  padding: 0 16px;
-} */
-
-.container::after, .row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.title {
-  color: grey;
-}
-
-.button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-}
-
-.button:hover {
-  background-color: #555;
-}
