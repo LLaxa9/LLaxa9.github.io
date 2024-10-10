@@ -49,7 +49,7 @@ let ribbonsAnon = function ribbons() {
 };
 
 // window.onload = (ribbonsAnon);
-window.onresize = (ribbonsAnon);
+// window.onresize = (ribbonsAnon);
 
 
 
@@ -116,6 +116,7 @@ function fbPostWidth(){
 
 window.onresize =function (){
     fbPostWidth();
+    ribbonsAnon();
 } 
 window.onload =function (){
     ribbonsAnon();
@@ -154,8 +155,8 @@ const searchEuropeanaRecords = async () => {
 };
 
 const showResults = (searchResults) => {
-    const resultsCountElement = document.getElementById("resultsCount");
-    resultsCountElement.textContent = searchResults.totalResults;
+    // const resultsCountElement = document.getElementById("resultsCount");
+    // resultsCountElement.textContent = searchResults.totalResults;
 
     const previewsContainer = document.getElementById("previewsContainer");
     previewsContainer.innerHTML = "";
@@ -177,16 +178,16 @@ const showResults = (searchResults) => {
         previewsContainer.appendChild(cardElement);
         }
 
-        const resultsContainer = document.getElementById("resultsContainer");
-        resultsContainer.classList.remove("invisible");
-        };
+    const resultsContainer = document.getElementById("resultsContainer");
+    resultsContainer.classList.remove("invisible");
+    };
 
-        const handleSubmitSearch = async (event) => {
-        event.preventDefault();
-        const searchResults = await searchEuropeanaRecords();
-        showResults(searchResults);
-        };
+const handleSubmitSearch = async (event) => {
+event.preventDefault();
+const searchResults = await searchEuropeanaRecords();
+showResults(searchResults);
+};
 
-        document.getElementById("search")
-        document.addEventListener("submit", handleSubmitSearch);
+document.getElementById("search")
+document.addEventListener("submit", handleSubmitSearch);
 
