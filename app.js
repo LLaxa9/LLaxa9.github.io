@@ -142,7 +142,7 @@ const searchEuropeanaRecords = async () => {
         // let's make sure we always get previews
         thumbnail: "true",
         // this is the maximum number of results
-        rows: 6,
+        rows: 8,
         // randomise the results!
         sort: "random",
         // we don't want much information here, so let's keep it minimal
@@ -161,21 +161,22 @@ const showResults = (searchResults) => {
     const previewsContainer = document.getElementById("previewsContainer");
     previewsContainer.innerHTML = "";
     for (const item of searchResults.items || []) {
-        const cardElement = document.createElement("div");
-        cardElement.classList.add("card", "m-3");
+        // const cardElement = document.createElement("div");
+        // cardElement.classList.add("card", "m-3");
         const imgElement = document.createElement("img");
         imgElement.setAttribute("src", item.edmPreview);
         imgElement.setAttribute("alt", item.title?.[0]);
-        imgElement.classList.add("card-img-top");
-        cardElement.appendChild(imgElement);
-        const cardBodyElement = document.createElement("div");
-        cardBodyElement.classList.add("card-body");
-        const cardTitleElement = document.createElement("strong");
-        cardTitleElement.classList.add("card-title");
-        cardTitleElement.textContent = item.title?.[0];
-        cardBodyElement.appendChild(cardTitleElement);
-        cardElement.appendChild(cardBodyElement);
-        previewsContainer.appendChild(cardElement);
+        // imgElement.classList.add("card-img-top");
+        // cardElement.appendChild(imgElement);
+        // const cardBodyElement = document.createElement("div");
+        // cardBodyElement.classList.add("card-body");
+        // const cardTitleElement = document.createElement("strong");
+        // cardTitleElement.classList.add("card-title");
+        // cardTitleElement.textContent = item.title?.[0];
+        // cardBodyElement.appendChild(cardTitleElement);
+        // cardElement.appendChild(cardBodyElement);
+        // previewsContainer.appendChild(cardElement);
+        previewsContainer.appendChild(imgElement);
         }
 
     const resultsContainer = document.getElementById("resultsContainer");
