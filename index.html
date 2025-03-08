@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.js"></script>
         <script src="app.js"></script>
         <title>About me</title>
     </head>
@@ -485,7 +486,18 @@
         </main>
         <footer class="banner">
             <!-- footer goes here -->
-            <h2>AA Gallery</h2>
+            
+             <script id="template" type="template/handlebars">
+                   {{{content}}}
+                </script>
+                <span id="target">
+                </span>
+                <script>
+                    let src = document.getElementById("template").innerHTML;
+                    let template = Handlebars.compile(src);
+                    let output = template({content: "<h2>AA Gallery</h2>"})
+                    document.getElementById("target").innerHTML = output;
+                </script>
             <section>
                 <nav>
                     <ul id="footer-ul">
